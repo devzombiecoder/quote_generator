@@ -1,0 +1,145 @@
+body {
+    background-color: #222f3e;
+}
+
+:root {
+    --main-color:#54a0ff;
+    --secondary-color:#b0c8e0;
+    --sans:"josefin sans",sans-serif;
+}
+.container {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 70vh;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-family: "dancing script",cursive;
+    overflow: hidden;
+    color: #797d7f;
+    letter-spacing: 0.5px;
+    display: grid;
+    place-items: center;
+
+}
+
+.inner {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    opacity: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    background: #ffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    font-size: 1.3rem;
+}
+
+.number::before {
+    content: '';
+    position: absolute;
+    top: -130px;
+    right: -30px;
+    width: 90px;
+    height: 200px;
+    background: var(--secondary-color);
+    transform: rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    z-index: -1;
+    box-shadow: 0 0 0.7rem rgba(0,0,0,0.5);
+}
+
+.number {
+    font-family: var(--sans);
+    position: absolute;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    color: rgba(255,255,255,0.7);
+}
+
+.number .fa { /*width: 20px;
+              height: 20px;*/
+             position: absolute;
+             left: -25px;
+             top: -7px;
+             cursor: pointer;
+             font-size: 31px;
+          }
+
+          .fa-twitter {color: #0984db;}
+
+ .number:hover .fa {
+    animation: zoom 1s linear;
+ }     
+ 
+ @keyframes zoom {
+
+    0%{
+               transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+           transform: scale(1);
+    }
+ }
+
+ .quotes {
+     position: absolute;
+     top: 35%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     -webkit-transform: translate(-50%,-50%);
+     width: 85%;
+     font-size: 1.7rem;
+     color: #000;
+     font-weight: 800;
+
+    }
+    .author {
+        position: absolute;
+        bottom: 40px;
+        right: 17px;
+        width: 100%;
+        text-align: right;
+        font-size: 1.4rem;
+        color: #000;
+        font-weight: 600;
+      }
+
+    #newQ {width: 100%;
+        position: absolute;
+        bottom: -21px;
+        min-height: 48px;
+        line-height: 48px;
+        text-align: center;
+        background:  #0984db;
+         color:white;
+         cursor: pointer;
+        }
+
+    .fa-quote-left {
+        position: absolute;
+        top: 34px;
+        left: 23px;
+        font-size: 2.5rem;
+    }
